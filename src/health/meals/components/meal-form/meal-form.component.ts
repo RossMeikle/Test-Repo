@@ -14,15 +14,50 @@ import { FormArray, FormGroup, FormBuilder, FormControl, Validators } from '@ang
       <form [formGroup]="form">
         <div class="meal-form__name">
           <label>
-            <h3>Meal name</h3>
+            <h3>Patient name</h3>
             <input 
               type="text" 
-              placeholder="e.g. English Breakfast" 
+              placeholder="John Jones" 
               formControlName="name">
             <div class="error" *ngIf="required">
-              Workout name is required
+              Patient name is required
             </div>
           </label>
+
+          <label>
+            <h3>Address</h3>
+            <input 
+              type="text" 
+              placeholder="Address line 1" 
+              formControlName="addressLine1">
+            <div class="error" *ngIf="required">
+              Address line 1 is required
+            </div>
+
+            <br/>
+            <br/>
+
+            <input 
+              type="text" 
+              placeholder="Address line 2" 
+              formControlName="addressLine2">
+            <div class="error" *ngIf="required">
+              Address line 2 is required
+            </div>
+
+            <br/>
+            <br/>
+
+            <input 
+              type="text" 
+              placeholder="Postcode" 
+              formControlName="postcode">
+            <div class="error" *ngIf="required">
+              Postcode is required
+            </div>
+
+          </label>
+
         </div>
         <div class="meal-form__food">
           <div class="meal-form__subtitle">

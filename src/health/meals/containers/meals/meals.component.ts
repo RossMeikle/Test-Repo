@@ -12,21 +12,21 @@ import { Subscription } from 'rxjs/Subscription';
     <div class="meals">
       <div class="meals__title">
         <h1>
-          <img src="/img/food.svg"> Your Meals
+          <img src="/img/food.svg"> Your Patients
         </h1>
         <a class="btn__add" [routerLink]="['../meals/new']">
-        <img src="/img/add-white.svg"> New Meal
+        <img src="/img/add-white.svg"> Add new patient
         </a>
       </div>
       <div *ngIf="meals$ | async as meals; else loading;">
           <div class="message" *ngIf="!meals.length">
-            <img src="/img/face.svg"> No Meals, add a new meal to begin
+            <img src="/img/face.svg"> No Patients, add a new patient to begin
           </div>
         <list-item *ngFor="let meal of meals" [item]="meal" (remove)="removeMeal($event)"></list-item>
       </div>
       <ng-template #loading>
         <div class="message">
-          <img src="/img/loading.svg"> Fetching Meals...
+          <img src="/img/loading.svg"> Fetching Patients...
         </div>
       </ng-template>
     </div>
