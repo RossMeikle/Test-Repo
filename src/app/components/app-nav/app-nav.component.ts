@@ -8,8 +8,8 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
     <div class="app-nav">
       <div class="wrapper">
         <a routerLink="schedule" routerLinkActive="active">Schedule</a>
-        <a routerLink="meals" routerLinkActive="active">Meals</a>
-        <a routerLink="workouts" routerLinkActive="active">Workouts</a>
+        <a routerLink="meals" routerLinkActive="active">Patients</a>
+        <a routerLink="workouts" routerLinkActive="active">Reports</a>
       </div>
     </div>
   `
